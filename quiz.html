@@ -1,0 +1,39 @@
+<link rel=¨stylesheet¨ href=¨./index.css¨>
+<script src="./index.js"></script>
+<script>
+  window.onload = function(){
+    document.getElementById("q1").innerHTML = myQuestions[0].question
+      
+    document.getElementById("a").innerHTML =myQuestions[0].answers[Object.keys(myQuestions[0].answers)[0]]
+    document.getElementById("b").innerHTML =myQuestions[0].answers[Object.keys(myQuestions[0].answers)[1]]
+    document.getElementById("c").innerHTML =myQuestions[0].answers[Object.keys(myQuestions[0].answers)[2]]
+
+    document.getElementById("optionA").value =myQuestions[0].answers[Object.keys(myQuestions[0].answers)[0]]
+    document.getElementById("optionB").value =myQuestions[0].answers[Object.keys(myQuestions[0].answers)[1]]
+    document.getElementById("optionC").value =myQuestions[0].answers[Object.keys(myQuestions[0].answers)[2]]
+  }
+</script>
+
+<h1>Quiz on Important Facts</h1>
+<div class="quiz-container">
+  <div id="quiz">
+      <h3 id="q1"></h3>
+      
+      <input type="checkbox" id="optionA" name="quiz" value=""><label id="a"></label></br>
+      <input type="checkbox" id="optionB" name="quiz"  value=""><label id="b"></label></br>
+      <input type="checkbox" id="optionC" name="quiz" value=""><label id="c"></label></br>
+      
+      
+
+    <button id="previous" onclick="previous()">Previous Question</button>
+    <button id="next" onclick="next()">Next Question</button>
+    <button type="submit" id="sub" onclick="submit()">Submit Quiz</button>
+
+  </div>
+  <div ><h2>Your Final Score is: <h1 id="results"></h1></h2></div>
+ 
+</div>
+
+
+
+
